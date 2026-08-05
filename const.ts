@@ -6,13 +6,13 @@ export const INTRO_YOUTUBE = {
 export const SEO = {
   siteName: 'Nica Environmental',
   profileName: 'Nicarao Delgado Duarte',
-  title: 'Nicarao Delgado | Environmental Engineering Solutions & Biotechnology',
+  title: 'Nicarao Delgado Duarte | Environmental Engineer & Biotechnology Researcher',
   description:
     'Ingeniero ambiental especializado en biotecnología ambiental, microbiología aplicada y sistemas de tratamiento de agua. Investigador doctoral en Rice University desarrollando soluciones sostenibles.',
   author: 'Nicarao Delgado Duarte',
   keywords:
     'Nicarao Delgado, Nica Environmental, Ingeniería Ambiental, Biotecnología Ambiental, Microbiología Aplicada, Tratamiento de Agua, Biorreactores, Rice University, Managua, Nicaragua',
-  image: '/images/spotlight-nicarao-delgado.webp',
+  image: '../../../public/images/profile.jpg',
   imageAlt: 'Retrato profesional de Nicarao Delgado Duarte, Ingeniero Ambiental',
   imageWidth: 800,
   imageHeight: 800,
@@ -34,5 +34,5 @@ export const SOCIAL_LINKS = {
 export const CONTACT_EMAIL = 'mailto:nicarao.delgado@gmail.com'
 export const CONTACT_PHONE = 'tel:+505-8888-8888'
 export const CONTACT_ADDRESS = 'Managua, Nicaragua'
-export const MAIN_STATYE = 'bg-neutral-dark/60 backdrop-blur-md text-neutral-white transition-colors hover:bg-neutral-dark/80'
+export const MAIN_STYLE = 'bg-neutral-dark/60 backdrop-blur-md text-neutral-white transition-colors hover:bg-neutral-dark/80'
 
