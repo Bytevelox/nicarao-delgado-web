@@ -1,7 +1,43 @@
 ---
 ---
 
-<section style="padding: 1.25rem; border: 1px solid #d1d5db; border-radius: 0.75rem; margin: 1rem 0; background: #f9fafb;">
-  <h2 style="margin: 0 0 0.5rem; font-size: 1.1rem;">LoadingScreen</h2>
-  <p style="margin: 0; color: #4b5563;">Componente en construcción.</p>
+<section
+  id="loading-screen"
+  class="fixed inset-0 z-50 flex min-h-screen items-center justify-center bg-neutral-black/95 text-neutral-white transition-opacity duration-500"
+  aria-label="Cargando contenido"
+>
+  <div class="flex flex-col items-center justify-center gap-4 text-center">
+    <img
+      src="/favicon.svg"
+      alt="Logo de Nica Environmental"
+      class="h-24 w-24 animate-pulse object-contain sm:h-32 sm:w-32"
+    />
+    <div class="flex flex-col items-center gap-2">
+      <p class="text-sm uppercase tracking-[0.35em] text-neutral-light">Cargando</p>
+      <div class="flex gap-2" aria-hidden="true">
+        <span class="h-2 w-2 rounded-full bg-red-light animate-bounce [animation-delay:0ms]"></span>
+        <span class="h-2 w-2 rounded-full bg-red-light animate-bounce [animation-delay:150ms]"></span>
+        <span class="h-2 w-2 rounded-full bg-red-light animate-bounce [animation-delay:300ms]"></span>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  const screen = document.getElementById('loading-screen');
+
+  if (screen) {
+    const hideScreen = () => {
+      screen.classList.add('opacity-0');
+      window.setTimeout(() => screen.remove(), 400);
+    };
+
+    if (document.readyState === 'complete') {
+      window.setTimeout(hideScreen, 350);
+    } else {
+      window.addEventListener('load', () => {
+        window.setTimeout(hideScreen, 350);
+      }, { once: true });
+    }
+  }
+</script>
